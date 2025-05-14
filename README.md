@@ -43,6 +43,41 @@ _Ref:_ [_Semiconductor Back-End Process_](https://news.skhynix.com/semiconductor
   - Finally, there are the companies that do everything from design, wafer production, and packaging, to testing. These companies are called IDMs (Integrated Device Manufacturer).
 
 ### 1.2 - Understanding Package Requirements And Foundational Package Types
+#### 1.2.1 - Package Requirements
+Selecting the right semiconductor package is a critical step in electronic system design, as it affects performance, cost, thermal management, size, and reliability. 
+
+| ![Package_Requirements](./docs/images/M1_L2_2.png) |
+|:---:|
+
+The criteria for semiconductor package selection generally fall into the following key categories:
+  - **Application-specific Requirements**
+    - Logic/ Memory die
+    - Power semiconductor die)
+  - **Electrical Requirements**
+    - I/O Pin Count
+    - Signal Integrity for high speed I/Os
+    - Power Delivery
+  - **Thermal Requirements**
+    - Thermal Dissipation
+    - Operating Temperature Range
+  - **Mechanical and Physical constraints**
+    - Form Factor: Footprint and chip height requirements for the system
+    - System Integration needs: MCM, SiP, 2.5/3D packaging for tighter integration
+  - **Cost Considerations**
+    - Package cost
+    - Board/ System Assembly cost
+  - **Reliability and Durability**
+    - Mechanical stress
+    - Thermal cycling
+    - Moisture and other environmental factors
+
+#### 1.2.2 - Typical Package Structure
+The following figure below shows the structure of a typical chip package and the connection hierarchy:
+
+| ![Package_Structure](./docs/images/M1_L2_3.png) |
+|:---:|
+
+
 ### 1.3 - Evolving Package Architectures - From Single Chip To Multi-Chip Modules
 ### 1.4 - Interposers Re-distribution Layers And 2.5D/3D Packaging Approaches
 ### 1.5 - Comparative Analysis And Selecting The Right Packaging Solution
