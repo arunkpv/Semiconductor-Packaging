@@ -77,8 +77,37 @@ The following figure below shows the structure of a typical chip package and the
 | ![Package_Structure](./docs/images/M1_L2_3.png) |
 |:---:|
 
+A typical IC package consists of:
+  - **Die**: The semiconductor die itself.
+  - **Carrier**: Intermediate structure for routing and support.
+  - **PCB (System Board)**: Final mounting platform where the packaged IC is installed/ soldered.
+  - **Mold Compound**: Protects the die from environmental damage.
+
+Mounting Technologies:
+  - **Through-hole Mounting**
+    - TO : Transistor Outline
+    - SIP : Single In-line Package
+    - DIP : Dual In-line Package
+    - PGA : Pin Grid Array
+  - **Surface Mount Technology**:
+    - (T)SOT : (Thin) Small Outline Transistor
+    - (T)SOP : (Thin) Small Outline Package
+    - SOIC : Small Outline IC Package
+    - QFN : Quad Flat No-leads
+    - QFP : Quad Flat Package
+    - PBGA : Plastic Ball Grid Array
+    - LGA : Land Grid Array
+    - FCBGA : Flip Chip Ball Grid Array
+    - CSP : Chip Scale Package
+  - **Advanced Packages**
+    - PoP : Package on Package
+    - SiP : System-in-Package
+    - MCM : Multi-Chip Module (eg: Intel Broadwell)
+    - CoWoS : Chip on Wafer on Substrate (eg: Nvidia GP100, GV100, GA100, etc.)
+
 
 ### 1.3 - Evolving Package Architectures - From Single Chip To Multi-Chip Modules
+
 ### 1.4 - Interposers Re-distribution Layers And 2.5D/3D Packaging Approaches
 ### 1.5 - Comparative Analysis And Selecting The Right Packaging Solution
 
