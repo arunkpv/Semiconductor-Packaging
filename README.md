@@ -197,17 +197,13 @@ This section covers the semiconductor supply chain and provides a detailed look 
 #### 2.1.1 - Semiconductor Supply Chain Overview
 The semiconductor supply chain is a multi-step process that transforms raw silicon into fully functional electronic products. The major steps are:
 
-| **1. Design** : Chip design and verification |
+| Semiconductor Supply Chain Review|
 |:---|
-|**Inputs** : Product requirements specification, EDA tools, Foundry PDKs, IPs <br> **Output** : GDSII layout file is _taped out_ to the foundry for mask creation and wafer fabrication. Test programs are also provided by the Design house for Wafer and Package level testing. <br> Examples: Nvidia, AMD, MediaTek, Intel, TI, Apple, ARM etc. |
-| **2. Wafer Fabrication (Foundry) : Physical ICs are manufactured onto wafers using photolithography and other processes** |
-| **Input: GDSII layout, Silicon wafers, Equipment, Gases, chemicals, Materials <br> **Output**: Processed wafers with patterned dies <br> Examples: TSMC, Samsung, Intel, GlobalFoundries |
-| **3. Packaging Assembly & Test : ICs are cut (diced), bonded, encapsulated, and tested** |
-| **Input**: Test programs, Singulated dies, substrate materials (e.g., ABF, BT resin), solder bumps <br> **Output**: Packaged IC (e.g., BGA, QFN, FCBGA, 2.5D/3D) <br> Examples: ASE, Amkor, JCET, Shinko, Ibiden |
-| **4. Board Assembly & Test : Multiple packaged ICs are mounted and board-level validation**|
-| **Input**: Packaged ICs, test programs, ATE systems <br> **Process**: Functional and parametric testing, burn-in, sorting <br> **Output**: Qualified ICs, binned by performance. Yield improvement and binning are critical for profitability. <br> Examples: ASE, Powertech, Amkor, UTAC |
-| **5. System Integration & Distribution** |
-| **Input**: Packaged, tested ICs; PCBs; passive components <br> **Process**: SMT assembly, system-level integration, validation <br> **Output**: Complete electronic systems (e.g., smartphones, servers) <br> Examples: OEMs Original Equipment Manufacturer (Apple, Cisco), ODMs Original Design Manufacturer (Foxconn, Pegatron), EMS Electronics Manufacturing Services (Flex, Jabil) |
+| **1. Design : Chip design and verification** <br> <ul> <li>**Input** : Product requirements specification, EDA tools, Foundry PDKs, IPs</li> <li>**Output** : GDSII layout file is _taped out_ to the foundry for mask creation and wafer fabrication. Test programs are also provided by the Design house for Wafer and Package level testing.</li> <li>Examples: Nvidia, AMD, MediaTek, Intel, TI, Apple, ARM etc.</li> </ul> |
+| **2. Wafer Fabrication (Foundry) : Physical ICs are manufactured onto wafers using photolithography and other processes** <br> <ul> <li> **Input** : GDSII layout, Silicon wafers, Equipment, Gases, chemicals, Materials</li> <li> **Output**: Processed wafers with patterned dies</li> <li> Examples: TSMC, Samsung, Intel, GlobalFoundries</li> </ul> |
+| **3. Packaging Assembly & Test : ICs are cut (diced), bonded, encapsulated, and tested** <br> <ul> <li>**Input**: Test programs, Singulated dies, substrate materials (e.g., ABF, BT resin), solder bumps</li> <li> **Output**: Packaged IC (e.g., BGA, QFN, FCBGA, 2.5D/3D)</li> <li> Examples: ASE, Amkor, JCET, Shinko, Ibiden</li> </ul> |
+| **4. Board Assembly & Test : Multiple packaged ICs are mounted and board-level validation** <br> <ul> <li>**Input**: Packaged ICs, test programs, ATE systems</li> **Output**: Qualified ICs, binned by performance. Yield improvement and binning are critical for profitability.</li> <li> Examples: ASE, Powertech, Amkor, UTAC</li> </ul> |
+| **5. System Integration & Distribution** <br> <ul> <li>**Input**: Packaged, tested ICs; PCBs; passive components </li> <li> **Process**: SMT assembly, system-level integration, validation </li> <li>**Output**: Complete electronic systems (e.g., smartphones, servers) </li> <li>Examples: OEMs Original Equipment Manufacturer (Apple, Cisco), ODMs Original Design Manufacturer (Foxconn, Pegatron), EMS Electronics Manufacturing Services (Flex, Jabil)</li> </ul> |
 
 | ![Semiconductor_Supply_Chain](./docs/images/M2_L1_1.png) |
 |:---|
@@ -216,24 +212,22 @@ The semiconductor supply chain is a multi-step process that transforms raw silic
 The ATMP process involves four core activities: Assembly, Testing, Marking, and Packaging.
 The ATMPs could be OSATs (like ASE, Amkor, TATA etc.) or in-house ATMPs of IDMs (like Intel, Samsung, Micron) or Foundries (like TSMC, Samsung Foundry)
 
-**Typical layout of an ATMP:**
-
-| ![Typical_ATMP_Layout](./docs/images/M2_L1_2.png) |
+| **Typical layout of an ATMP:** <br> ![Typical_ATMP_Layout](./docs/images/M2_L1_2.png) |
 |:---|
 
-  - Material Preparation and Storage
+  1. Material Preparation and Storage
     - Incoming Wafers, Substrates, Leadframes, Mold Compounds, Consumables
-  - Processing Zone (Clean Room: ISO Class 6 & 7)
+  2. Processing Zone (Clean Room: ISO Class 6 & 7)
     - Major activities:
       - Die Attach & Mount
       - Wire or Flip-Chip Bonding
       - RDL formation
       - Encapsulation/ molding.
-  - Testing Area
+  3. Testing Area
     - Electrical Tests
     - Burn-in Test
     - Reliability chamber testing
-  - Warehouse
+  4. Warehouse
     - Storage of packaged ICs
 
 ### 2.2 - Wafer Pre-Preparation - Grinding And Dicing
