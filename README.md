@@ -243,6 +243,7 @@ We will be taking an already available FC-BGA package within the Icepak Toolkit 
 
 
   - **Step 1 : Open AEDT and launch Icepak**
+
 | ![AEDT_IcePak_1](./docs/images/Lab1_FCBGA_ThermalSim_1.png) |
 |:---|
 
@@ -270,18 +271,17 @@ We will be taking an already available FC-BGA package within the Icepak Toolkit 
 | **Die Underfill** <br> ![AEDT_IcePak_10](./docs/images/Lab1_FCBGA_ThermalSim_10.png) | **Die** <br> ![AEDT_IcePak_11](./docs/images/Lab1_FCBGA_ThermalSim_11.png) |
 
 ### 3.3 - Material Definitions And Thermal Power Sources
+
   - **Step 4 : Review and modify the material and definition types for the different components of the model.**
 
 | Material Definitions <br> ![AEDT_IcePak_12](./docs/images/Lab1_FCBGA_ThermalSim_12.png) |
 |:---|
-
 
   - **Step 5.1 : Add/ Assign Source Thermal Model for Die**
     - In "Project Manager" sub-window, expand Thermal section and open the **_BGA1_die_source_** and configure the thermal condition as shown below:
 
 | Source Thermal Model for Die <br> ![AEDT_IcePak_13](./docs/images/Lab1_FCBGA_ThermalSim_13.png) |
 |:---|
-
 
 - **Step 5.2 : Add/ Assign Source Thermal Model for Substrate**
     - To add a thermal boundary condition for the substrate, right click on **_Flipchip_BGA1_substrate_** under `Models -> Flipchip_BGA1_Group -> Solids` and assign a Thermal Source.
