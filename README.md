@@ -9,9 +9,9 @@ The workshop offers a full-pipeline understanding of the semiconductor packaging
  | Module # | Topic(s) Covered | Status |
  |---|---|---|
  |[**Mod. 1**](#1---packaging-evolution-from-basics-to-3d-integration) | **Packaging Evolution: From Basics to 3D Integration** <br> <ol> <li>[Introduction To Semiconductor Packaging And Industry Overview](#11---introduction-to-semiconductor-packaging-and-industry-overview)</li> <li>[Understanding Package Requirements And Foundational Package Types](#12---understanding-package-requirements-and-foundational-package-types)</li> <li>[Evolving Package Architectures - From Single Chip To Multi-Chip Modules](#13---evolving-package-architectures---from-single-chip-to-multi-chip-modules)</li> <li>[Interposers Re-distribution Layers And 2.5D/3D Packaging Approaches](#14---interposers-re-distribution-layers-and-25d3d-packaging-approaches)</li> <li>[Comparative Analysis And Selecting The Right Packaging Solution](#15---comparative-analysis-and-selecting-the-right-packaging-solution)</li> </ol> | ![](https://progress-bar.xyz/100/?title=Done) |
- |[**Mod. 2**](#2---from-wafer-to-package-assembly-and-manufacturing-essentials) | **From Wafer to Package: Assembly and Manufacturing Essentials** <br> <ol> <li>[Setting The Stage - Supply Chain And Facilities](#21---setting-the-stage---supply-chain-and-facilities)</li> <li>[Wafer Pre-Preparation - Grinding And Dicing](#22---wafer-pre-preparation---grinding-and-dicing)</li><li>[Wire Bond Packaging - Die Attach To Molding](#23---wire-bond-packaging---die-attach-to-molding)</li> <li>[Flip Chip Assembly - Bump Formation And Underfill](#24---flip-chip-assembly---bump-formation-and-underfill)</li> <li>[Wafer Level Packaging And Conclusion](#25---wafer-level-packaging-and-conclusion)</li> </ol> | ![](https://progress-bar.xyz/0/?title=Yet-to-start) |
- |[**Mod. 3**](#3---labs-thermal-simulation-of-semiconductor-packages-with-ansys) | **Labs: Thermal Simulation of Semiconductor Packages with ANSYS** <br> <ol> <li>[Introduction And Getting Started With ANSYS Electronics Desktop](#31---introduction-and-getting-started-with-ansys-electronics-desktop)</li> <li>[Setting Up A Flip-Chip BGA Package](#32---setting-up-a-flip-chip-bga-package)</li> <li>[Material Definitions And Thermal Power Sources](#33---material-definitions-and-thermal-power-sources)</li> <li>[Meshing And Running The Thermal Analysis](#34---meshing-and-running-the-thermal-analysis)</li> <li>[Viewing Results And Exploring Other Package Types](#35---viewing-results-and-exploring-other-package-types)</li> </ol> | ![](https://progress-bar.xyz/0/?title=Yet-to-start) |
- |[**Mod. 4**](#4---ensuring-package-reliability-testing-and-performance-validation) | **Ensuring Package Reliability: Testing and Performance Validation** <br> <ol> <li>[Introduction to Package Testing and Electrical Functionality Checks](#41---introduction-to-package-testing-and-electrical-functionality-checks)</li> <li>[Reliability and Performance Testing of Semiconductor Packages](#42---reliability-and-performance-testing-of-semiconductor-pack--ages)</li> </ol> | ![](https://progress-bar.xyz/0/?title=Yet-to-start) |
+ |[**Mod. 2**](#2---from-wafer-to-package-assembly-and-manufacturing-essentials) | **From Wafer to Package: Assembly and Manufacturing Essentials** <br> <ol> <li>[Setting The Stage - Supply Chain And Facilities](#21---setting-the-stage---supply-chain-and-facilities)</li> <li>[Wafer Pre-Preparation - Grinding And Dicing](#22---wafer-pre-preparation---grinding-and-dicing)</li><li>[Wire Bond Packaging - Die Attach To Molding](#23---wire-bond-packaging---die-attach-to-molding)</li> <li>[Flip Chip Assembly - Bump Formation And Underfill](#24---flip-chip-assembly---bump-formation-and-underfill)</li> <li>[Wafer Level Packaging And Conclusion](#25---wafer-level-packaging-and-conclusion)</li> </ol> | ![](https://progress-bar.xyz/80/?title=Progress) <br> Pending: Documentation |
+ |[**Mod. 3**](#3---labs-thermal-simulation-of-semiconductor-packages-with-ansys) | **Labs: Thermal Simulation of Semiconductor Packages with ANSYS** <br> <ol> <li>[Introduction And Getting Started With ANSYS Electronics Desktop](#31---introduction-and-getting-started-with-ansys-electronics-desktop)</li> <li>[Setting Up A Flip-Chip BGA Package](#32---setting-up-a-flip-chip-bga-package)</li> <li>[Material Definitions And Thermal Power Sources](#33---material-definitions-and-thermal-power-sources)</li> <li>[Meshing And Running The Thermal Analysis](#34---meshing-and-running-the-thermal-analysis)</li> <li>[Viewing Results And Exploring Other Package Types](#35---viewing-results-and-exploring-other-package-types)</li> </ol> | ![](https://progress-bar.xyz/80/?title=Progress) <br> Pending: Documentation |
+ |[**Mod. 4**](#4---ensuring-package-reliability-testing-and-performance-validation) | **Ensuring Package Reliability: Testing and Performance Validation** <br> <ol> <li>[Introduction to Package Testing and Electrical Functionality Checks](#41---introduction-to-package-testing-and-electrical-functionality-checks)</li> <li>[Reliability and Performance Testing of Semiconductor Packages](#42---reliability-and-performance-testing-of-semiconductor-pack--ages)</li> </ol> |  ![](https://progress-bar.xyz/80/?title=Progress) <br> Pending: Documentation |
  |[**Mod. 5**](#5---package-design-and-modeling-building-a-semiconductor-package-from-scratch) | **Package Design and Modeling: Building a Semiconductor Package from Scratch** <br> <ol> <li>[Introduction to Package Cross-Section Modeling in ANSYS Electronics Desktop (AEDT)](#51---introduction-to-package-cross-section-modeling-in-ansys-electronics-desktop-aedt)</li> <li>[Creating the Die and Substrate in AEDT](#52---creating-the-die-and-substrate-in-aedt)</li> <li>[Adding Die Attach Material and Bond Pads](#53---adding-die-attach-material-and-bond-pads)</li> <li>[Wire Bond Creation and Material Assignment](#54---wire-bond-creation-and-material-assignment)</li> <li>[Applying Mold Compound and Finalizing the Package Model](#55---applying-mold-compound-and-finalizing-the-package-model)</li> </ol> | ![](https://progress-bar.xyz/0/?title=Yet-to-start) |
 
 
@@ -148,7 +148,7 @@ The below figure shows the anatomy of some of the commonly used leadframe and la
 | ![Package_Interposers_RDLs](./docs/images/M1_L4_1.png) |
 |:---|
 
-#### 1.4.1 Redistribution Layers (RDL)
+#### 1.4.1 - Redistribution Layers (RDL)
 RDL (Redistribution Layer) is a metal layer added on top of a die or wafer to reroute the I/O pads to new locations. This enables more flexible bump layouts, especially important for fan-out packages or wafer-level chip scale packaging (WLCSP).
 
   - Applications
@@ -162,7 +162,7 @@ RDL (Redistribution Layer) is a metal layer added on top of a die or wafer to re
     - Reduces package size and thickness
     - Enables multi-chip placement and interconnect on a single substrate
 
-#### 1.4.2 Interposers
+#### 1.4.2 - Interposers
 An interposer is a passive or active layer inserted between the die and the substrate, acting as an intermediate routing interface. It enables dense signal routing, power delivery, and die-to-die interconnect.
 
   - Types: Silicon, Organic, Glass
@@ -176,7 +176,7 @@ An interposer is a passive or active layer inserted between the die and the subs
     - Passive: No logic, just routing and vias
     - Active: Includes power delivery, clocking, or even memory logic
 
-#### 1.4.3. 2.5D/3D Integration
+#### 1.4.3 - 2.5D/3D Integration
   - **2.5D**: Multiple dies (e.g., CPU + HBM) placed side-by-side on a common interposer. Interposer provides connectivity, not the substrate directly. Popular in HPC and AI (e.g., AMD Instinct, NVIDIA GPUs with HBM).
   - **3D**: Dies are stacked vertically, interconnected through Through-Silicon Vias (TSVs). 3D NAND, HBM memory stacks, logic-on-logic stacking.
 
@@ -186,10 +186,47 @@ The following table provides a comparison of the various IC package types and th
 | ![Packages_Comparison](./docs/images/M1_L5_1.png) |
 |:---|
 
+Selecting the right semiconductor packaging depends on multiple criteria across performance, reliability, form factor and cost.
 _________________________________________________________________________________________________________  
 
 ## 2 - From Wafer to Package: Assembly and Manufacturing Essentials
+This section covers the semiconductor supply chain and provides a detailed look into a package manufacturing unit (**ATMP** – Assembly, Testing, Marking, and Packaging).
+
 ### 2.1 - Setting The Stage - Supply Chain And Facilities
+#### 2.1.1 - Semiconductor Supply Chain Overview
+The semiconductor supply chain is a multi-step process that transforms raw silicon into fully functional electronic products. The major steps are:
+
+  - 1. **Design** : Chip design and verification using EDA tools and .
+    - **Inputs**: Product requirements specification, EDA tools, Foundry PDKs, IPs
+    - **Output**: GDSII layout file is **_taped out_** to the foundry for mask creation and wafer fabrication. Test programs are also provided by the Design house for Wafer and Package level testing.
+    - Examples: Nvidia, AMD, MediaTek, Intel, TI, Apple, ARM etc.
+  
+  - 2. **Wafer Fabrication (Foundry)** : Physical ICs are manufactured onto wafers using photolithography and other processes.
+    - **Input**: GDSII layout, Silicon wafers, Equipment, Gases, chemicals, Materials
+    - **Output**: Processed wafers with patterned dies
+    - Examples: TSMC, Samsung, Intel, GlobalFoundries
+  
+  - 3. **Packaging Assembly & Test** : ICs are cut (diced), bonded, encapsulated, and tested
+    - **Input**: Test programs, Singulated dies, substrate materials (e.g., ABF, BT resin), solder bumps
+    - **Output**: Packaged IC (e.g., BGA, QFN, FCBGA, 2.5D/3D)
+    - Examples: ASE, Amkor, JCET, Shinko, Ibiden
+  
+  - 4. **Board Assembly & Test** : Multiple packaged ICs are mounted and board-level validation.
+    - **Input**: Packaged ICs, test programs, ATE systems
+    - **Process**: Functional and parametric testing, burn-in, sorting
+    - **Output**: Qualified ICs, binned by performance. Yield improvement and binning are critical for profitability.
+    - Who: ASE, Powertech, Amkor, UTAC
+
+  - 5. **System Integration & Distribution**
+    - **Input**: Packaged, tested ICs; PCBs; passive components
+    - **Process**: SMT assembly, system-level integration, validation
+    - **Output**: Complete electronic systems (e.g., smartphones, servers)
+    - Who: OEMs Original Equipment Manufacturer (Apple, Cisco), ODMs Original Design Manufacturer (Foxconn, Pegatron), EMS Electronics Manufacturing Services (Flex, Jabil)
+Example
+➡️ OEM (Apple)
+➡️ contracts ODM (Quanta) to design hardware
+➡️ who works with EMS (Foxconn) to mass-produce and assemble the final product.
+
 ### 2.2 - Wafer Pre-Preparation - Grinding And Dicing
 ### 2.3 - Wire Bond Packaging - Die Attach To Molding
 ### 2.4 - Flip Chip Assembly - Bump Formation And Underfill
