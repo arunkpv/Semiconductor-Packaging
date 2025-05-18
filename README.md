@@ -357,8 +357,53 @@ ________________________________________________________________________________
 _________________________________________________________________________________________________________  
 
 ## 5 - Package Design and Modeling: Building a Semiconductor Package from Scratch
+
+This is a hands-on lab to design a semiconductor wire bond package from scratch using Ansys Electronics Desktop (AEDT). 
+
 ### 5.1 - Introduction to Package Cross-Section Modeling in ANSYS Electronics Desktop (AEDT)
+
+The main focus of this lab exercise is to build the complete cross-section of a wire bond package, including die, substrate, bonding wires, and mold compound, rather than performing any simulation or analyses.
+
+**<U>Package Specifications:</U>**
+| Component | Properties |
+|:---|:---|
+| 1. Die | <ul> <li>Material : Silicon</li> <li>Dimensions : 3mm x 3mm</li> <li>Die Height : 200 micron</li> </ul> |
+| 2. Substrate | <ul> <li>Material : FR4</li> <li>Dimensions : 5mm x 5mm</li> <li>Height : 500 micron</li> </ul> |
+| 3. Die Attach | <ul> <li>Material : Modified Epoxy</li> <li>Thickness : 100 micron</li> </ul> |
+| 4. Die Bond Pads | <ul> <li>Material : Copper</li> <li>Dimensions : 0.2mm x 0.2mm</li> <li>Thickness : 5 micron</li> </ul> |
+| 5. Substrate Bond Pads | <ul> <li>Material : Copper</li> <li>Dimensions : 0.2mm x 0.2mm</li> <li>Thickness : 10 micron</li> </ul> |
+| 6. Bond Wire | <ul> <li>Material : Gold wire</li> <li>Type: JEDEC 4-point</li> </ul> |
+| 7. Mold Compound | <ul> <li>Material : Epoxy (Kevlar reinforced)</li> <li>Thickness : 1.2mm</li> </ul> |
+
+  - **Step 1 : Launch AEDT and select Q3D (or Icepak, Maxwell 3D)**
+
+| ![AEDT_Q3D_1](./docs/images/Lab2_PackageModeling_1.png) |
+|:---|
+
 ### 5.2 - Creating the Die and Substrate in AEDT
+
+  - **Step 2 : Define the working unit**
+    - `Modeler -> Units...`
+    - Choose **mm** or **um** as the working unit for creating the model.
+
+| Set working Units <br> ![AEDT_Q3D_2.1](./docs/images/Lab2_PackageModeling_2.1.png) | ![AEDT_Q3D_2.2](./docs/images/Lab2_PackageModeling_2.2.png) |
+|:---|:---|
+
+  - **Step 3.1 : Create the Die Geometry**
+    - Select the rectangle tool from the ribbon or using the Menus (`Draw -> Rectangle`) to draw a rectangle
+    - Now, double click on **CreateRectangle** `Model -> Rectangle1` to open up its Properties Dialog box.
+    - Specify the position with one corner at the origin (0, 0, 0) and the dimensions as 3mm x 3mm
+    - Select `Model -> Rectangle1` and from the menu bar: `Modeler -> Surface -> Thicken Sheet...` and set the thickness to 200 microns (0.2mm)
+
+  - **Step 3.2 : Assign Material Properties**
+    - Open up the Properties Dialog box either by double clicking on `Model -> Rectangle1`
+    - Rename the geometry to **Die**
+    - Choose **Silicon** as the material from the Material Library.
+
+| **Die Geometry** <br> ![AEDT_Q3D_3.1](./docs/images/Lab2_PackageModeling_3.1.png) | **Die Thickness** ![AEDT_Q3D_3.2](./docs/images/Lab2_PackageModeling_3.2.png) |
+|:---|:---|
+| **Die Material** <br> ![AEDT_Q3D_3.3](./docs/images/Lab2_PackageModeling_3.3.png) |  |
+
 ### 5.3 - Adding Die Attach Material and Bond Pads
 ### 5.4 - Wire Bond Creation and Material Assignment
 ### 5.5 - Applying Mold Compound and Finalizing the Package Model
