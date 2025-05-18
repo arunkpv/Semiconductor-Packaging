@@ -373,7 +373,7 @@ The main focus of this lab exercise is to build the complete cross-section of a 
 | 4. Die Bond Pads | <ul> <li>Material : Copper</li> <li>Dimensions : 0.2mm x 0.2mm</li> <li>Thickness : 5 micron</li> </ul> |
 | 5. Substrate Bond Pads | <ul> <li>Material : Copper</li> <li>Dimensions : 0.2mm x 0.2mm</li> <li>Thickness : 10 micron</li> </ul> |
 | 6. Bond Wire | <ul> <li>Material : Gold wire</li> <li>Type: JEDEC 4-point</li> </ul> |
-| 7. Mold Compound | <ul> <li>Material : Epoxy (Kevlar reinforced)</li> <li>Thickness : 1.2mm</li> </ul> |
+| 7. Mold Compound | <ul> <li>Material : Epoxy</li> <li>Thickness : 1.2mm</li> </ul> |
 
   - **Step 1 : Launch AEDT and select Q3D (or Icepak, Maxwell 3D)**
 
@@ -419,12 +419,48 @@ The main focus of this lab exercise is to build the complete cross-section of a 
     - Draw a rectangle of the same size as that of the die (3mm x 3mm) and at the same co-ordinates (0, 0, 0).
     - Set the thickness to -100 microns (-0.1mm) as the DAM lies beneath the die and the substrate
     - Assign the material to _**Modified Eopxy**_
+    - **NOTE:** Assign different shades/ colours to adjacent components to easily discern in 3D view.
 
 | **Die Attach Material** <br> ![AEDT_Q3D_5.1](./docs/images/Lab2_PackageModeling_5.1.png) | **Geometry** ![AEDT_Q3D_5.2](./docs/images/Lab2_PackageModeling_5.2.png) |
 |:---|:---|
 | **Material** <br> ![AEDT_Q3D_5.3](./docs/images/Lab2_PackageModeling_5.3.png) |  |
 
+  - **Step 6 : Create Bond pads on Die and Substrate**
+  - Draw a small rectangle and configure its size to to that of the die pad (0.2mm x 0.2mm). We will place the first Die Pad at the co-ordinates (0.2, 0.2, 0.2) so that it sits on top of the die and is at one of the edges.
+  - Set the thickness to 5 microns (0.005mm)
+
+| **Die Bond Pad** <br> ![AEDT_Q3D_6.1](./docs/images/Lab2_PackageModeling_6.1.png) |
+|:---|
+
+  - Similarly, draw a small rectangle and configure its size to to that of the substrate bond pad (0.2mm x 0.2mm).
+  - We will place this Substrate Bind Pad at the co-ordinates (0.2, -0.7, -0.1) so that it sits aligned to the Die bond pad created in the previous step, and also on top of the substrate.
+  - Set the substrate bond pad thickness to 10 microns (0.010mm)
+
+| **Substrate Bond Pad** <br> ![AEDT_Q3D_6.2](./docs/images/Lab2_PackageModeling_6.2.png) |
+|:---|
+
 ### 5.4 - Wire Bond Creation and Material Assignment
+
+  - **Step 7 : Create Bond Wires**
+    - Use the **Bondwire tool** under: `Draw -> Bondwire`
+    - Connect the centre of the Die Bond pad to the centre of the Substrate Bond Pad. It might be easier to draw the wires from the Top view orientation.
+    - Select the Bondwire type as JEDEC 4-point
+    - Assign gold as the Bondwire material
+
+| **Draw the Bondwire connecting the die & substrate pad centers** <br> ![AEDT_Q3D_7.1](./docs/images/Lab2_PackageModeling_7.1.png) | ![AEDT_Q3D_7.2](./docs/images/Lab2_PackageModeling_7.2.png) |
+|:---|:---|
+| **Gold Bondwire** <br> ![AEDT_Q3D_7.3](./docs/images/Lab2_PackageModeling_7.3.png) |  |
+
+Now, repeat the steps 6 and 7 to create and connect all the die and substrate bond pads using bondwires.
+
 ### 5.5 - Applying Mold Compound and Finalizing the Package Model
+
+  - **Step 8 : Build the mold compound around the die**
+    - Create a rectangular enclosure around the die and wires (5mm x 5mm, 1.2mm thickness)
+    - Position at (-1, -1, -0.1) covering the top side of the substrate.
+    - Set the thickness to 1.2mm so that it covers the die and the bondwires, while also leaving margin for any laser marking processes
+
+| **Mold** <br> ![AEDT_Q3D_8.1](./docs/images/Lab2_PackageModeling_8.1.png) | ![AEDT_Q3D_8.2](./docs/images/Lab2_PackageModeling_8.2.png) |
+|:---|:---|
 
 _________________________________________________________________________________________________________  
