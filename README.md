@@ -247,7 +247,7 @@ We will be taking an already available FC-BGA package within the Icepak Toolkit 
 |:---|
 
   - **Step 2.1 : Create a Flipchip BGA Package**
-    - Icepak -> Toolkit -> Geometry -> Packages -> Flipchip_BGA
+    - `Icepak -> Toolkit -> Geometry -> Packages -> Flipchip_BGA`
 
 | ![AEDT_IcePak_2](./docs/images/Lab1_FCBGA_ThermalSim_2.png) |
 |:---|
@@ -284,14 +284,14 @@ We will be taking an already available FC-BGA package within the Icepak Toolkit 
 
 
 - **Step 5.2 : Add/ Assign Source Thermal Model for Substrate**
-    - To add a thermal boundary condition for the substrate, right click on **_Flipchip_BGA1_substrate_** under **_Models -> Flipchip_BGA1_Group -> Solids_** and assign a Thermal Source.
+    - To add a thermal boundary condition for the substrate, right click on **_Flipchip_BGA1_substrate_** under `Models -> Flipchip_BGA1_Group -> Solids` and assign a Thermal Source.
     - Set the thermal condition on the substrate to Fixed Temperatue and the temperature as Ambient.
 
 | Add Source Thermal Model for Substrate <br> ![AEDT_IcePak_14.1](./docs/images/Lab1_FCBGA_ThermalSim_14.1.png) | ![AEDT_IcePak_14.2](./docs/images/Lab1_FCBGA_ThermalSim_14.2.png) |
 |:---|:---|
 
   - **Step 6 : Add Thermal monitors for the different components**
-    - To add a Thermal monitor to the substrate, right click on the **_Flipchip_BGA1_substrate_** under **_Models -> Flipchip_BGA1_Group -> Solids_** and then choose **_Assign Monitor -> Point..._**
+    - To add a Thermal monitor to the substrate, right click on the **_Flipchip_BGA1_substrate_** under `Models -> Flipchip_BGA1_Group -> Solids` and then choose `Assign Monitor -> Point...`
     - In the sub-window that appears, select **Temperature**
     - Repeat the same to add thermal monitors for the die and the die-underfill.
 
@@ -301,9 +301,53 @@ We will be taking an already available FC-BGA package within the Icepak Toolkit 
 | Thermal monitors added <br> ![AEDT_IcePak_16](./docs/images/Lab1_FCBGA_ThermalSim_16.png) |
 |:---|
 
-
 ### 3.4 - Meshing And Running The Thermal Analysis
+
+  - **Step 7.1 : Generate Mesh**
+    - Go to the Simulation tab and click on `Generate Mesh`
+    - Save the project if prompted and wait for the mesh generation to get completed.
+    - Take a note of any error(s) and warning(s) that are shown and ignore/ take steps to debug & fix the issue(s) as required.
+
+  - **Step 7.2 : Review Mesh Quality metrics**
+    - Once the mesh is generated, review the quality metrics of the generated mesh such as Face Alignment, Skewness and Volume.
+
+| **Mesh Generation** <br> ![AEDT_IcePak_17](./docs/images/Lab1_FCBGA_ThermalSim_17.png) |
+|:---|
+
+| **Mesh Quality - Face Alignment** ![AEDT_IcePak_17.1](./docs/images/Lab1_FCBGA_ThermalSim_17.1.png) | **Mesh Quality - Skewness** ![AEDT_IcePak_17.2](./docs/images/Lab1_FCBGA_ThermalSim_17.2.png) |
+|:---|:---|
+| **Mesh Quality - Volume** ![AEDT_IcePak_17.3](./docs/images/Lab1_FCBGA_ThermalSim_17.3.png) | |
+
+  - **Step 8 : Add Thermal Analysis**
+    - Under `Project Manager`, right click on `Analysis -> then, select Add Analysis Setup` and configure the solver settings as required. (We will choose all default settings for our analysis)
+
+| **Add Analysis Setup** <br> ![AEDT_IcePak_18](./docs/images/Lab1_FCBGA_ThermalSim_18.png) |
+|:---|
+
 ### 3.5 - Viewing Results And Exploring Other Package Types
+
+  - **Step 9 : Now, Validate the Simulation setup**
+    - Click on the **Validate** button in the top ribbon
+    - Ensure all checks are validated successfully
+
+| **Validate the setup** <br> ![AEDT_IcePak_19](./docs/images/Lab1_FCBGA_ThermalSim_19.png) |
+|:---|
+
+  - **Step 10: Run the simulation and plot the temperature map**
+    - Click on **Analyze All** button in the top ribbon
+    - Wait for the simulation to get completed successfully. Take note of any warning(s) or errors that may need further debug or setup modification(s).
+    - Once the simulation is completed, select the complete FC-BGA package in the 3D view by drawing a selection rectangle using the left-mouse button.
+    - Right click and then select `Plot Fields -> Temperature -> Temperature`
+    - Configure the different plot options:
+      - Specify Name, Folder
+      - Plot on Surface only
+      - Surface Smoothing -> Enable Gaussian Smoothing
+
+| **Plot Fields** ![AEDT_IcePak_20](./docs/images/Lab1_FCBGA_ThermalSim_20.png) | **Field Plot Settings** ![AEDT_IcePak_21](./docs/images/Lab1_FCBGA_ThermalSim_21.png) |
+|:---|:---|
+| **Field Plot - Top view** ![AEDT_IcePak_22](./docs/images/Lab1_FCBGA_ThermalSim_22.png) | **Field Plot - Bottom view** ![AEDT_IcePak_23](./docs/images/Lab1_FCBGA_ThermalSim_23.png) |
+
+
 _________________________________________________________________________________________________________  
 
 ## 4 - Ensuring Package Reliability: Testing and Performance Validation
