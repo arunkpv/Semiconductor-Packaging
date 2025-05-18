@@ -231,6 +231,7 @@ The ATMPs could be OSATs (like ASE, Amkor, TATA etc.) or in-house ATMPs of IDMs 
     - Storage of packaged ICs
 
 ### 2.2 - Wafer Pre-Preparation - Grinding And Dicing
+
 This section explains the wafer preparation process inside an ISO Class 7 cleanroom of an ATMP (Assembly, Testing, Marking, and Packaging) facility. 
 
 | ![Wafer_Grinding_Dicing](./docs/images/M2_L2_1.png) |
@@ -251,6 +252,29 @@ This section explains the wafer preparation process inside an ISO Class 7 cleanr
 6.2 **Blade Dicing**: A high-precision blade is then used to physically dice the wafer into individual dies or chips. <br>
 
 ### 2.3 - Wire Bond Packaging - Die Attach To Molding
+
+| ![Wire_Bond_Packaging](./docs/images/M2_L3_1.png) |
+|:---|
+
+1. **Die Attach**: The individual (die) is attached to a substrate or lead frame using epoxy. <br>
+1.1 The Epoxy is dispensed onto the die in some pattern so as to avoid any voids during attach. (Pattern complexity vs. speed of processing trade-off) <br>
+1.2 The die is picked up by the pick-up head, and <br>
+1.3 Placed on the Die Attach Film (DAF) <br>
+
+2. **Curing**: The die-attached unit is subjected to a heating process to cure the epoxy, ensuring a strong and stable bond between the die and the substrate.
+
+3. **Wire Bonding**: Fine gold or aluminum wires are bonded between the die and the package substrate pads using thermal and ultrasonic energy. <br>
+3.1 Formation of a ball bond using an EFO (Electronic Flame-Off) spark
+3.2 Bonding the ball to the die pad (using pressure, vibration, heat)
+3.3 Creating a wire loop
+3.4 Forming a crescent bond on the substrate side
+
+4. **Molding (Transfer Molding)**: A mold compound is injected to encapsulate the wire-bonded die, providing protection from environmental damage and mechanical stress. Resin flows uniformly to cover the entire chip.
+
+5. **Marking (Laser)**: Laser marking is used to engrave identification codes, logos, or batch numbers on the molded package surface.
+
+6. **Singulation (Dicing Blade)**: The molded wafer is cut into individual units (ICs) using a dicing blade. A thinner blade is typically used to minimize chipping and maximize precision.
+
 
 
 ### 2.4 - Flip Chip Assembly - Bump Formation And Underfill
