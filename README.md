@@ -9,7 +9,7 @@ The workshop offers a full-pipeline understanding of the semiconductor packaging
  | Module # | Topic(s) Covered | Status |
  |---|---|---|
  |[**Mod. 1**](#1---packaging-evolution-from-basics-to-3d-integration) | **Packaging Evolution: From Basics to 3D Integration** <br> <ol> <li>[Introduction To Semiconductor Packaging And Industry Overview](#11---introduction-to-semiconductor-packaging-and-industry-overview)</li> <li>[Understanding Package Requirements And Foundational Package Types](#12---understanding-package-requirements-and-foundational-package-types)</li> <li>[Evolving Package Architectures - From Single Chip To Multi-Chip Modules](#13---evolving-package-architectures---from-single-chip-to-multi-chip-modules)</li> <li>[Interposers Re-distribution Layers And 2.5D/3D Packaging Approaches](#14---interposers-re-distribution-layers-and-25d3d-packaging-approaches)</li> <li>[Comparative Analysis And Selecting The Right Packaging Solution](#15---comparative-analysis-and-selecting-the-right-packaging-solution)</li> </ol> | ![](https://progress-bar.xyz/100/?title=Done) |
- |[**Mod. 2**](#2---from-wafer-to-package-assembly-and-manufacturing-essentials) | **From Wafer to Package: Assembly and Manufacturing Essentials** <br> <ol> <li>[Setting The Stage - Supply Chain And Facilities](#21---setting-the-stage---supply-chain-and-facilities)</li> <li>[Wafer Pre-Preparation - Grinding And Dicing](#22---wafer-pre-preparation---grinding-and-dicing)</li><li>[Wire Bond Packaging - Die Attach To Molding](#23---wire-bond-packaging---die-attach-to-molding)</li> <li>[Flip Chip Assembly - Bump Formation And Underfill](#24---flip-chip-assembly---bump-formation-and-underfill)</li> <li>[Wafer Level Packaging And Conclusion](#25---wafer-level-packaging-and-conclusion)</li> </ol> | ![](https://progress-bar.xyz/80/?title=Progress) <br> Pending: Documentation |
+ |[**Mod. 2**](#2---from-wafer-to-package-assembly-and-manufacturing-essentials) | **From Wafer to Package: Assembly and Manufacturing Essentials** <br> <ol> <li>[Setting The Stage - Supply Chain And Facilities](#21---setting-the-stage---supply-chain-and-facilities)</li> <li>[Wafer Pre-Preparation - Grinding And Dicing](#22---wafer-pre-preparation---grinding-and-dicing)</li><li>[Wire Bond Packaging - Die Attach To Molding](#23---wire-bond-packaging---die-attach-to-molding)</li> <li>[Flip Chip Assembly - Bump Formation And Underfill](#24---flip-chip-assembly---bump-formation-and-underfill)</li> <li>[Wafer Level Packaging And Conclusion](#25---wafer-level-packaging-and-conclusion)</li> </ol> | ![](https://progress-bar.xyz/100/?title=Done) |
  |[**Mod. 3**](#3---labs-thermal-simulation-of-semiconductor-packages-with-ansys) | **Labs: Thermal Simulation of Semiconductor Packages with ANSYS** <br> <ol> <li>[Introduction And Getting Started With ANSYS Electronics Desktop](#31---introduction-and-getting-started-with-ansys-electronics-desktop)</li> <li>[Setting Up A Flip-Chip BGA Package](#32---setting-up-a-flip-chip-bga-package)</li> <li>[Material Definitions And Thermal Power Sources](#33---material-definitions-and-thermal-power-sources)</li> <li>[Meshing And Running The Thermal Analysis](#34---meshing-and-running-the-thermal-analysis)</li> <li>[Viewing Results And Exploring Other Package Types](#35---viewing-results-and-exploring-other-package-types)</li> </ol> | ![](https://progress-bar.xyz/100/?title=Done) |
  |[**Mod. 4**](#4---ensuring-package-reliability-testing-and-performance-validation) | **Ensuring Package Reliability: Testing and Performance Validation** <br> <ol> <li>[Introduction to Package Testing and Electrical Functionality Checks](#41---introduction-to-package-testing-and-electrical-functionality-checks)</li> <li>[Reliability and Performance Testing of Semiconductor Packages](#42---reliability-and-performance-testing-of-semiconductor-pack--ages)</li> </ol> |  ![](https://progress-bar.xyz/80/?title=Progress) <br> Pending: Documentation |
  |[**Mod. 5**](#5---package-design-and-modeling-building-a-semiconductor-package-from-scratch) | **Package Design and Modeling: Building a Semiconductor Package from Scratch** <br> <ol> <li>[Introduction to Package Cross-Section Modeling in ANSYS Electronics Desktop (AEDT)](#51---introduction-to-package-cross-section-modeling-in-ansys-electronics-desktop-aedt)</li> <li>[Creating the Die and Substrate in AEDT](#52---creating-the-die-and-substrate-in-aedt)</li> <li>[Adding Die Attach Material and Bond Pads](#53---adding-die-attach-material-and-bond-pads)</li> <li>[Wire Bond Creation and Material Assignment](#54---wire-bond-creation-and-material-assignment)</li> <li>[Applying Mold Compound and Finalizing the Package Model](#55---applying-mold-compound-and-finalizing-the-package-model)</li> </ol> | ![](https://progress-bar.xyz/100/?title=Done) |
@@ -278,12 +278,63 @@ This section explains the wafer preparation process inside an ISO Class 7 cleanr
 
 
 ### 2.4 - Flip Chip Assembly - Bump Formation And Underfill
+
+Flip chip packaging enhances electrical performance and I/O density by mounting the die face-down on the substrate.
+
+| ![FlipChip_Packaging](./docs/images/M2_L4_1.png) |
+|:---|
+
+1. **Bump Formation on Silicon (Si)**:
+1.1 Solder bumps are created on the die. <br>
+1.2 The bumps are then reflowed to form strong electrical and mechanical connections. <br>
+
+2. **Chip Flip and Placement**:
+2.1 The chip is flipped upside down. <br>
+2.3 Flux is dispensed on to the substrate to aid solder wetting. <br>
+2.2 Solder balls are aligned with the substrate’s bond pads. <br>
+
+3. **Solder Reflow**: The chip is heated so that the solder balls melt and bond with the substrate.
+
+4. **Flux Cleansing**: The excess residual flux is removed using solvent spray to prevent corrosion.
+
+5. **Underfill Dispensing**: Underfill material is applied to improve mechanical strength and thermal conductivity between the die and substrate.
+
+6. **Underfill Cure**: Heated to cure the underfill.
+
+7. **Molding**: A protective mold compound is applied.
+
+8. **Marking**: Laser marking is done for identification (part number, lot, batch, date of manufacture etc.) and traceability.
+
+9. **Ball Mounting and Reflow**: Solder balls are mounted on the substrate. A final reflow process ensures firm attachment of solder balls.
+
 ### 2.5 - Wafer Level Packaging And Conclusion
+
+Wafer-Level Packaging (WLP) is a technique where the entire packaging process is done at the wafer level, before dicing and offers smaller size, and lower cost.  
+There are two main types of WLP:
+  - Fan-in WLP (FI-WLP) : I/O pads are redistributed within the die area to match the solder bumps.
+  - Fan-out WLP (FO-WLP) : Uses RDLs to extend the I/O pads beyond the die area, enabling higher I/O density.
+
+**<U>FO-WLP Process</U>**
+
+| ![WLP](./docs/images/M2_L5_1.png) |
+|:---|
+
+1. **Reconstitution Process:**
+1.1 Diced Wafer is taken <br>
+1.2 From this, only the known-good dies are picked and placed onto a temporary carrier. <br>
+1.3 Molding to form a single reconstituted wafer after releasing the carrier. <br>
+
+2. **RDL (Redistribution Layer) Preparation**:
+2.1 Dielectric & Metal are layers are deposited on to the reconstituted wafer and patterned. <br>
+2.2 Multiple such RDL layers are patterned to form the final RDL, similar to the metallization stages in FEOL/ CMOS facbrication <br>
+
+3. **Solder Ball Attach**: Solder Balls are mounted on the final RDL pads to enable surface mounting. <br>
+
+4. **Final Laser Marking and Singulation**: Each packaged die is marked and the reconstituted wafer is diced (singulated) into individual packages.
 
 _________________________________________________________________________________________________________  
 
 ## 3 - Labs: Thermal Simulation of Semiconductor Packages with ANSYS tools
-
 
 ### 3.1 - Introduction And Getting Started With ANSYS Electronics Desktop
 
