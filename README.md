@@ -241,10 +241,12 @@ ANSYS Electronics Desktop (AEDT) is a multi-physics simulation software that com
 
 We will be taking an already available FC-BGA package within the Icepak Toolkit for this simulation exercise.
 
-| ![AEDT_IcePak_1](./docs/images/Lab1_FCBGA_ThermalSim_1.png) | ![AEDT_IcePak_2](./docs/images/Lab1_FCBGA_ThermalSim_2.png) |
+| | |
 |:---|:---|
 | 1. Open AEDT and launch Icepak <br> | 2. Create a Flipchip BGA Package <br> Icepak -> Toolkit -> Geometry -> Packages -> Flipchip_BGA |
-|---|---|
+| ![AEDT_IcePak_1](./docs/images/Lab1_FCBGA_ThermalSim_1.png) | ![AEDT_IcePak_2](./docs/images/Lab1_FCBGA_ThermalSim_2.png) |
+| | |
+
 
 
 ### 3.3 - Material Definitions And Thermal Power Sources
