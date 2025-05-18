@@ -242,17 +242,17 @@ ANSYS Electronics Desktop (AEDT) is a multi-physics simulation software that com
 We will be taking an already available FC-BGA package within the Icepak Toolkit for this simulation exercise.
 
 
-  - **Step 1. Open AEDT and launch Icepak**
+  - **Step 1 : Open AEDT and launch Icepak**
 | ![AEDT_IcePak_1](./docs/images/Lab1_FCBGA_ThermalSim_1.png) |
 |:---|
 
-  - **Step 2.1 Create a Flipchip BGA Package**
+  - **Step 2.1 : Create a Flipchip BGA Package**
     - Icepak -> Toolkit -> Geometry -> Packages -> Flipchip_BGA
 
 | ![AEDT_IcePak_2](./docs/images/Lab1_FCBGA_ThermalSim_2.png) |
 |:---|
 
-  - **Step 2.2 The Package Configuration window opens up**
+  - **Step 2.2 : The Package Configuration window opens up**
     - The dimensions and other aspects of the package, substrate, die, die underfill and the solder balls can be configured here.
     - Once configured, click OK to generate the package model. 
 
@@ -263,23 +263,44 @@ We will be taking an already available FC-BGA package within the Icepak Toolkit 
 | Package generated in Icepak <br> ![AEDT_IcePak_7](./docs/images/Lab1_FCBGA_ThermalSim_7.png) |
 |:---|
 
-  - **Step 3. Explore the 3D Package Model Structure in Icepak**
+  - **Step 3 : Explore the 3D Package Model Structure in Icepak**
 
 | **Ball Group** <br> ![AEDT_IcePak_8](./docs/images/Lab1_FCBGA_ThermalSim_8.png) | **Substrate** <br> ![AEDT_IcePak_9](./docs/images/Lab1_FCBGA_ThermalSim_9.png) |
 |:---|:---|
 | **Die Underfill** <br> ![AEDT_IcePak_10](./docs/images/Lab1_FCBGA_ThermalSim_10.png) | **Die** <br> ![AEDT_IcePak_11](./docs/images/Lab1_FCBGA_ThermalSim_11.png) |
 
 ### 3.3 - Material Definitions And Thermal Power Sources
-  - **Step 4. Review and modify the material and definition types for the different components of the model.**
+  - **Step 4 : Review and modify the material and definition types for the different components of the model.**
 
 | Material Definitions <br> ![AEDT_IcePak_12](./docs/images/Lab1_FCBGA_ThermalSim_12.png) |
 |:---|
 
-  - **Step 5. Add/ Assign a Source Thermal Model for Thermal Simulation**
-    - In "Project Manager" sub-window, expand Thermal section and open the _BGA1_die_source_ and configure the thermal condition as shown below:
 
-| Material Definitions <br> ![AEDT_IcePak_12](./docs/images/Lab1_FCBGA_ThermalSim_12.png) |
+  - **Step 5.1 : Add/ Assign Source Thermal Model for Die**
+    - In "Project Manager" sub-window, expand Thermal section and open the **_BGA1_die_source_** and configure the thermal condition as shown below:
+
+| Source Thermal Model for Die <br> ![AEDT_IcePak_13](./docs/images/Lab1_FCBGA_ThermalSim_13.png) |
 |:---|
+
+
+- **Step 5.2 : Add/ Assign Source Thermal Model for Substrate**
+    - To add a thermal boundary condition for the substrate, right click on **_Flipchip_BGA1_substrate_** under **_Models -> Flipchip_BGA1_Group -> Solids_** and assign a Thermal Source.
+    - Set the thermal condition on the substrate to Fixed Temperatue and the temperature as Ambient.
+
+| Add Source Thermal Model for Substrate <br> ![AEDT_IcePak_14.1](./docs/images/Lab1_FCBGA_ThermalSim_14.1.png) | ![AEDT_IcePak_14.2](./docs/images/Lab1_FCBGA_ThermalSim_14.2.png) |
+|:---|:---|
+
+  - **Step 6 : Add Thermal monitors for the different components**
+    - To add a Thermal monitor to the substrate, right click on the **_Flipchip_BGA1_substrate_** under **_Models -> Flipchip_BGA1_Group -> Solids_** and then choose **_Assign Monitor -> Point..._**
+    - In the sub-window that appears, select **Temperature**
+    - Repeat the same to add thermal monitors for the die and the die-underfill.
+
+| Add Thermal monitor for Substrate <br> ![AEDT_IcePak_15.1](./docs/images/Lab1_FCBGA_ThermalSim_15.1.png) | ![AEDT_IcePak_15.2](./docs/images/Lab1_FCBGA_ThermalSim_15.2.png) |
+|:---|:---|
+
+| Thermal monitors added <br> ![AEDT_IcePak_16](./docs/images/Lab1_FCBGA_ThermalSim_16.png) |
+|:---|
+
 
 ### 3.4 - Meshing And Running The Thermal Analysis
 ### 3.5 - Viewing Results And Exploring Other Package Types
