@@ -212,8 +212,53 @@ The semiconductor supply chain is a multi-step process that transforms raw silic
 | ![Semiconductor_Supply_Chain](./docs/images/M2_L1_1.png) |
 |:---|
 
+#### 2.1.2 - Introduction to a Package Manufacturing Unit (ATMP)
+The ATMP process involves four core activities: Assembly, Testing, Marking, and Packaging.
+The ATMPs could be OSATs (like ASE, Amkor, TATA etc.) or in-house ATMPs of IDMs (like Intel, Samsung, Micron) or Foundries (like TSMC, Samsung Foundry)
+
+**Typical layout of an ATMP:**
+
+| ![Typical_ATMP_Layout](./docs/images/M2_L1_2.png) |
+|:---|
+
+  - Material Preparation and Storage
+    - Incoming Wafers, Substrates, Leadframes, Mold Compounds, Consumables
+  - Processing Zone (Clean Room: ISO Class 6 & 7)
+    - Major activities:
+      - Die Attach & Mount
+      - Wire or Flip-Chip Bonding
+      - RDL formation
+      - Encapsulation/ molding.
+  - Testing Area
+    - Electrical Tests
+    - Burn-in Test
+    - Reliability chamber testing
+  - Warehouse
+    - Storage of packaged ICs
+
 ### 2.2 - Wafer Pre-Preparation - Grinding And Dicing
+This section explains the wafer preparation process inside an ISO Class 7 cleanroom of an ATMP (Assembly, Testing, Marking, and Packaging) facility. 
+
+| ![Wafer_Grinding_Dicing](./docs/images/M2_L2_1.png) |
+|:---|
+
+1. **Incoming Wafer Carrier**: Wafers arrive in a protective carrier that ensures they remain uncontaminated before entering the processing line.
+
+2. **Wafer Inspection**: The wafers are visually and optically inspected for surface defects, contamination, or damage before further processing.
+
+3. **Wafer Front Tape Lamination**: A protective tape is laminated on the front (device side) of the wafer to protect it during subsequent processes like grinding and dicing.
+
+4. **Wafer Backside Grinding**: The wafer’s backside is ground using a rotating grinding wheel to reduce the wafer thickness from the ~700um to around 200um and enable better thermal performance and flexibility for final packaging.
+
+5. **Tape Frame Mounting to Wafer Backside**: After grinding, the wafer is mounted on a ring frame using an adhesive tape. This stabilizes the wafer and keeps individual die in place during dicing.
+
+6. **Two-step Wafer Dicing (Laser Grooving + Blade Dicing)**: <br>
+6.1 **Laser Grooving**: Precision laser cuts grooves along scribe lines to weaken the wafer structure. <br>
+6.2 **Blade Dicing**: A high-precision blade is then used to physically dice the wafer into individual dies or chips. <br>
+
 ### 2.3 - Wire Bond Packaging - Die Attach To Molding
+
+
 ### 2.4 - Flip Chip Assembly - Bump Formation And Underfill
 ### 2.5 - Wafer Level Packaging And Conclusion
 
