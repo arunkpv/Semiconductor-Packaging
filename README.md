@@ -16,8 +16,11 @@ The workshop offers a full-pipeline understanding of the semiconductor packaging
 
 
 ## 1 - Packaging Evolution: From Basics to 3D Integration
-Semiconductor packaging refers to the final stage of semiconductor device fabrication, where the finished semiconductor die is enclosed in a protective package that allows it to be integrated into electronic systems. The key Functions of semiconductor package are:
-  1. **Protection** from external environmental (physical/ mechanical damage, humidity, corrosion, contaminants and ESD)
+Semiconductor packaging refers to the final stage of semiconductor device fabrication, where the finished semiconductor die is enclosed in a protective package that allows it to be integrated into electronic systems.
+**_Basically, the package helps transition a fragile silicon die fabricated in a foundry cleanroom into the real-world system/ product._**
+
+The key Functions of semiconductor package are:
+  1. **Protection** from external environmental (physical/ mechanical damage, humidity, corrosion/ contaminants & chemical damage and ESD)
   2. **Electrical connectivity** between the die and the external environment via leads (pins, balls or lands)
   3. **Mechanical support and connection** of the die to the system
   4. **Thermal dissipation** to conduct heat away from the die
@@ -35,7 +38,7 @@ The following figure is a flow chart that shows the relationship between the sem
 | ![Semiconductor_Manufacturing](./docs/images/M1_L1_2.png) |
 |:---:|
 
-_Ref:_ [_Semiconductor Back-End Process_](https://news.skhynix.com/semiconductor-back-end-process-episode-1-understanding-semiconductor-testing/)
+_Ref:_ [_SK Hynix Newsroom: Semiconductor Back-End Process Episode 3_](https://news.skhynix.com/semiconductor-back-end-process-episode-1-understanding-semiconductor-testing/)
 
   - Companies like Nvidia, Qualcomm and Apple that only design semiconductors are called “fabless.”
   - Products designed by fabless companies are made into wafers, and the facilities that produce these wafers are called “foundries.” Global companies with these facilities include TSMC, Global Foundries and UMC.
@@ -100,16 +103,88 @@ Mounting Technologies:
     - FCBGA : Flip Chip Ball Grid Array
     - CSP : Chip Scale Package
   - **Advanced Packages**
-    - PoP : Package on Package
-    - SiP : System-in-Package
+    - PoP : Package on Package (Qualcomm SD series, Apple A-Series, Samsung Exynos etc.)
     - MCM : Multi-Chip Module (eg: Intel Broadwell)
+    - SiP : System-in-Package (Apple S1)
     - CoWoS : Chip on Wafer on Substrate (eg: Nvidia GP100, GV100, GA100, etc.)
 
-
 ### 1.3 - Evolving Package Architectures - From Single Chip To Multi-Chip Modules
+#### 1.3.1 Classification and Anatomy of Semiconductor Packages
 
-### 1.4 - Interposers Re-distribution Layers And 2.5D/3D Packaging Approaches
+The various types of semiconductor packages can be broadly grouped into two main categories:
+  - Conventional Packages
+  - Wafer-level packages
+
+In conventional packaging, the wafer is sawed into dice before the chip is packaged, while wafer-level packaging involves a part, or all, of the packaging process being performed at the wafer level before proceeding with wafer sawing.
+
+| ![Package_Classification](./docs/images/M1_L3_2.png) |
+|:---|
+| _Ref:_ [_SK Hynix Newsroom: Semiconductor Back-End Process Episode 3_](https://news.skhynix.com/semiconductor-back-end-process-episode-3-understanding-the-different-types-of-semiconductor-packages/)_ |
+
+Depending on the medium of the package, packages can be further categorized into leadframe and laminate packages.
+  - **Leadframe-Based Packages**
+    - **DIP**: Traditional, with wirebonds and external leads
+    - **QFN**: Compact with exposed thermal pads
+    - **Leadframe CSP & QFP**: Scaled for density and SMT
+
+  - **Laminate-Based Packages**
+    - **PBGA**: Wirebonded to laminated substrates
+    - **Flip Chip PBGA**: Superior signal and thermal performance
+    - **LGA, FCCSP**: Common in modern devices
+
+  - **Advanced Substrates**
+    - **2D**: Dies placed side-by-side on the same substrate
+    - **2.1D**: Adds RDL for better routing
+    - **2.3D**: Uses organic interposers
+    - **2.5D**: Silicon interposer for high-speed interconnects (e.g.: CoWoS)
+
+The below figure shows the anatomy of some of the commonly used leadframe and laminate based packages and advanced substrates:
+
+| ![Package_Anatomy](./docs/images/M1_L3_1.png) |
+|:---|
+
+### 1.4 - Interposers, RDLs And 2.5D/3D Packaging Approaches
+
+| ![Package_Interposers_RDLs](./docs/images/M1_L4_1.png) |
+|:---|
+
+#### 1.4.1 Redistribution Layers (RDL)
+RDL (Redistribution Layer) is a metal layer added on top of a die or wafer to reroute the I/O pads to new locations. This enables more flexible bump layouts, especially important for fan-out packages or wafer-level chip scale packaging (WLCSP).
+
+  - Applications
+    - Fan-out wafer-level packaging (FO-WLP, FO-BGA)
+    - Panel-level packaging (PLP)
+    - Multi-die integration
+    - System-in-Package (SiP)
+
+  - Advantages:
+    - Allows larger bump pitch for finer pad layouts
+    - Reduces package size and thickness
+    - Enables multi-chip placement and interconnect on a single substrate
+
+#### 1.4.2 Interposers
+An interposer is a passive or active layer inserted between the die and the substrate, acting as an intermediate routing interface. It enables dense signal routing, power delivery, and die-to-die interconnect.
+
+  - Types: Silicon, Organic, Glass
+
+  -  Functions:
+    - Routes signals between multiple dies (e.g., chiplets)
+    - Provides thermal expansion management
+    - Enables high bandwidth communication
+
+  - Passive vs. Active Interposers:
+    - Passive: No logic, just routing and vias
+    - Active: Includes power delivery, clocking, or even memory logic
+
+#### 1.4.3. 2.5D/3D Integration
+  - **2.5D**: Multiple dies (e.g., CPU + HBM) placed side-by-side on a common interposer. Interposer provides connectivity, not the substrate directly. Popular in HPC and AI (e.g., AMD Instinct, NVIDIA GPUs with HBM).
+  - **3D**: Dies are stacked vertically, interconnected through Through-Silicon Vias (TSVs). 3D NAND, HBM memory stacks, logic-on-logic stacking.
+
 ### 1.5 - Comparative Analysis And Selecting The Right Packaging Solution
+The following table provides a comparison of the various IC package types and their typical applications:
+
+| ![Packages_Comparison](./docs/images/M1_L5_1.png) |
+|:---|
 
 _________________________________________________________________________________________________________  
 
