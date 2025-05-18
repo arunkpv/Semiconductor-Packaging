@@ -215,17 +215,13 @@ The semiconductor supply chain is a multi-step process that transforms raw silic
     - **Input**: Packaged ICs, test programs, ATE systems
     - **Process**: Functional and parametric testing, burn-in, sorting
     - **Output**: Qualified ICs, binned by performance. Yield improvement and binning are critical for profitability.
-    - Who: ASE, Powertech, Amkor, UTAC
+    - Examples: ASE, Powertech, Amkor, UTAC
 
   - 5. **System Integration & Distribution**
     - **Input**: Packaged, tested ICs; PCBs; passive components
     - **Process**: SMT assembly, system-level integration, validation
     - **Output**: Complete electronic systems (e.g., smartphones, servers)
-    - Who: OEMs Original Equipment Manufacturer (Apple, Cisco), ODMs Original Design Manufacturer (Foxconn, Pegatron), EMS Electronics Manufacturing Services (Flex, Jabil)
-Example
-➡️ OEM (Apple)
-➡️ contracts ODM (Quanta) to design hardware
-➡️ who works with EMS (Foxconn) to mass-produce and assemble the final product.
+    - Examples: OEMs Original Equipment Manufacturer (Apple, Cisco), ODMs Original Design Manufacturer (Foxconn, Pegatron), EMS Electronics Manufacturing Services (Flex, Jabil)
 
 ### 2.2 - Wafer Pre-Preparation - Grinding And Dicing
 ### 2.3 - Wire Bond Packaging - Die Attach To Molding
@@ -234,9 +230,23 @@ Example
 
 _________________________________________________________________________________________________________  
 
-## 3 - Labs: Thermal Simulation of Semiconductor Packages with ANSYS
+## 3 - Labs: Thermal Simulation of Semiconductor Packages with ANSYS tools
+
+
 ### 3.1 - Introduction And Getting Started With ANSYS Electronics Desktop
+
+ANSYS Electronics Desktop (AEDT) is a multi-physics simulation software that combines Electromagnetic, Signal Integrity, Thermal and Electro-Mechanical simulation tools in a single integrated platform. It is widely used for designing and analyzing high-speed electronic circuits and systems.
+
 ### 3.2 - Setting Up A Flip-Chip BGA Package
+
+We will be taking an already available FC-BGA package within the Icepak Toolkit for this simulation exercise.
+
+| ![AEDT_IcePak_1](./docs/images/Lab1_FCBGA_ThermalSim_1.png) | ![AEDT_IcePak_2](./docs/images/Lab1_FCBGA_ThermalSim_2.png) |
+|:---|:---|
+| 1. Open AEDT and launch Icepak <br> | 2. Create a Flipchip BGA Package <br> Icepak -> Toolkit -> Geometry -> Packages -> Flipchip_BGA |
+|---|---|
+
+
 ### 3.3 - Material Definitions And Thermal Power Sources
 ### 3.4 - Meshing And Running The Thermal Analysis
 ### 3.5 - Viewing Results And Exploring Other Package Types
