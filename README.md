@@ -81,12 +81,13 @@ The following figure below shows the structure of a typical chip package and the
 |:---:|
 
 A typical IC package consists of:
-  - **Die**: The semiconductor die itself.
-  - **Carrier**: Intermediate structure for routing and support.
-  - **PCB (System Board)**: Final mounting platform where the packaged IC is installed/ soldered.
-  - **Mold Compound**: Protects the die from environmental damage.
+  1. **Die**: The semiconductor die itself.
+  2. **Carrier/ Substrate**: The carrier or substrate is the intermediate structure on which the die sits and provides both mechanical support and electrical contact.
+  3. **Die-to-carrier interconnections**: The die is connected to the substrate using bond wires or solder bumps
+  4. **Carrier-to-Board interconnections**: The substrate is often soldered/ connected to the PCB for integration into larger systems using pins, leads balls or lands.
+  - **Mold Compound**: A molding compound (commonly epoxy or plastic) encapsulates the whole die & other components, and provides protection from moisture, contaminants, and physical damage.
 
-Mounting Technologies:
+**Mounting Technologies:**
   - **Through-hole Mounting**
     - TO : Transistor Outline
     - SIP : Single In-line Package
@@ -196,32 +197,20 @@ This section covers the semiconductor supply chain and provides a detailed look 
 #### 2.1.1 - Semiconductor Supply Chain Overview
 The semiconductor supply chain is a multi-step process that transforms raw silicon into fully functional electronic products. The major steps are:
 
-  - 1. **Design** : Chip design and verification using EDA tools and .
-    - **Inputs**: Product requirements specification, EDA tools, Foundry PDKs, IPs
-    - **Output**: GDSII layout file is **_taped out_** to the foundry for mask creation and wafer fabrication. Test programs are also provided by the Design house for Wafer and Package level testing.
-    - Examples: Nvidia, AMD, MediaTek, Intel, TI, Apple, ARM etc.
-  
-  - 2. **Wafer Fabrication (Foundry)** : Physical ICs are manufactured onto wafers using photolithography and other processes.
-    - **Input**: GDSII layout, Silicon wafers, Equipment, Gases, chemicals, Materials
-    - **Output**: Processed wafers with patterned dies
-    - Examples: TSMC, Samsung, Intel, GlobalFoundries
-  
-  - 3. **Packaging Assembly & Test** : ICs are cut (diced), bonded, encapsulated, and tested
-    - **Input**: Test programs, Singulated dies, substrate materials (e.g., ABF, BT resin), solder bumps
-    - **Output**: Packaged IC (e.g., BGA, QFN, FCBGA, 2.5D/3D)
-    - Examples: ASE, Amkor, JCET, Shinko, Ibiden
-  
-  - 4. **Board Assembly & Test** : Multiple packaged ICs are mounted and board-level validation.
-    - **Input**: Packaged ICs, test programs, ATE systems
-    - **Process**: Functional and parametric testing, burn-in, sorting
-    - **Output**: Qualified ICs, binned by performance. Yield improvement and binning are critical for profitability.
-    - Examples: ASE, Powertech, Amkor, UTAC
+| **1. Design** : Chip design and verification |
+|:---|
+|**Inputs** : Product requirements specification, EDA tools, Foundry PDKs, IPs <br> **Output** : GDSII layout file is _taped out_ to the foundry for mask creation and wafer fabrication. Test programs are also provided by the Design house for Wafer and Package level testing. <br> Examples: Nvidia, AMD, MediaTek, Intel, TI, Apple, ARM etc. |
+| **2. Wafer Fabrication (Foundry) : Physical ICs are manufactured onto wafers using photolithography and other processes** |
+| **Input: GDSII layout, Silicon wafers, Equipment, Gases, chemicals, Materials <br> **Output**: Processed wafers with patterned dies <br> Examples: TSMC, Samsung, Intel, GlobalFoundries |
+| **3. Packaging Assembly & Test : ICs are cut (diced), bonded, encapsulated, and tested** |
+| **Input**: Test programs, Singulated dies, substrate materials (e.g., ABF, BT resin), solder bumps <br> **Output**: Packaged IC (e.g., BGA, QFN, FCBGA, 2.5D/3D) <br> Examples: ASE, Amkor, JCET, Shinko, Ibiden |
+| **4. Board Assembly & Test : Multiple packaged ICs are mounted and board-level validation**|
+| **Input**: Packaged ICs, test programs, ATE systems <br> **Process**: Functional and parametric testing, burn-in, sorting <br> **Output**: Qualified ICs, binned by performance. Yield improvement and binning are critical for profitability. <br> Examples: ASE, Powertech, Amkor, UTAC |
+| **5. System Integration & Distribution** |
+| **Input**: Packaged, tested ICs; PCBs; passive components <br> **Process**: SMT assembly, system-level integration, validation <br> **Output**: Complete electronic systems (e.g., smartphones, servers) <br> Examples: OEMs Original Equipment Manufacturer (Apple, Cisco), ODMs Original Design Manufacturer (Foxconn, Pegatron), EMS Electronics Manufacturing Services (Flex, Jabil) |
 
-  - 5. **System Integration & Distribution**
-    - **Input**: Packaged, tested ICs; PCBs; passive components
-    - **Process**: SMT assembly, system-level integration, validation
-    - **Output**: Complete electronic systems (e.g., smartphones, servers)
-    - Examples: OEMs Original Equipment Manufacturer (Apple, Cisco), ODMs Original Design Manufacturer (Foxconn, Pegatron), EMS Electronics Manufacturing Services (Flex, Jabil)
+| ![Semiconductor_Supply_Chain](./docs/images/M2_L1_1.png) |
+|:---|
 
 ### 2.2 - Wafer Pre-Preparation - Grinding And Dicing
 ### 2.3 - Wire Bond Packaging - Die Attach To Molding
