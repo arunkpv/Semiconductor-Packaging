@@ -454,9 +454,68 @@ We will be taking an already available FC-BGA package within the Icepak Toolkit 
 _________________________________________________________________________________________________________  
 
 ## 4 - Ensuring Package Reliability: Testing and Performance Validation
-### 4.1 - Introduction to Package Testing and Electrical Functionality Checks
-### 4.2 - Reliability and Performance Testing of Semiconductor Pack -ages
 
+### 4.1 - Introduction to Package Testing and Electrical Functionality Checks
+
+ICs are tested at multiple points during the manufacturing process to ensure they meet performance, reliability, and functionality requirements. Testing takes place both at the foundry and at OSAT facilities.
+
+| ![Testing_at_Different_Stages](./docs/images/M4_L1_1.png) |
+|:---|
+
+#### 4.1.1 - Foundry Testing Stages
+**1. Front-End Manufacturing**
+  - Involves fabrication of integrated circuits on silicon wafers.
+  - Leads to fine tuning of the Process parameters to improve yield, reduce IDDQ/ leakage and improve speed/ performance.
+
+**2. Wafer Probe Test**
+  - Wafer is mounted on a probe station and a probe card with makes contact with the bond pads or bump pads of each die.
+  - An ATE can now send test patterns to mark the die as good or bad.
+
+#### 4.1.2 - OSAT Testing Stages
+**1. Wafer Sorting**
+  - Dies are sorted based on probe test results.
+  - Only functional dies proceed to packaging.
+
+**2. Package Manufacturing**
+  - Functional dies are packaged
+
+**3. Package Testing**
+  - Conducted in ISO Class 6/7 cleanroom zones
+  - Testing includes:
+    - AOST (Assembly Open and Short Test): Shorts/ Opens in Packages
+    - Burn-in Test: Elevated temperature and voltage and power cycling are applied to accelerate ageing to catch early failures.
+    - Final Test: Validate the electrical performance of the packaged IC across temperature and voltage corners and ensure it meets the datasheet specifications.
+
+| ![Package_Testing_1](./docs/images/M4_L1_2.png) | ![Package_Testing_2](./docs/images/M4_L1_3.png) |
+|:---|:---|
+
+**4. System Level Testing (SLT)**
+  - Testing is performed in conditions that closely mimic real-world system operation. SLT verifies how a chip behaves when it runs actual software or firmware inside a system-like environment.
+
+### 4.2 - Reliability and Performance Testing of Semiconductor Packages
+
+#### 4.2.1 Burn-in and Final Test
+
+**1. Burn-In Test**
+  - Burn-in testing is a reliability screening process where semiconductor devices are exposed to elevated temperatures, voltages, and operating conditions for an extended period to accelerate aging and failure mechanisms.
+  - It is used to identify and eliminate early-life failures (also called "infant mortality") in ICs before they are shipped to end users.
+
+| ![Package_Testing_3](./docs/images/M4_L2_1.png) |
+|:---|
+
+**2. Final Test (FT)**
+  - Final Test is the last major electrical test phase after the semiconductor die has been packaged.
+  - It verifies that the packaged device meets all functional, parametric, and performance specifications before it is shipped to customers.
+  - It is typically performed by OSATs (Outsourced Semiconductor Assembly and Test providers) or in-house test facilities.
+
+| ![Package_Testing_4](./docs/images/M4_L2_2.png) |
+|:---|
+
+
+**Summary: ATE & Test Categories**
+
+| ![Package_Testing_5](./docs/images/M4_L2_3.png) |
+|:---|
 _________________________________________________________________________________________________________  
 
 ## 5 - Package Design and Modeling: Building a Semiconductor Package from Scratch
